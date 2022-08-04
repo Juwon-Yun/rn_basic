@@ -3,12 +3,11 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import CoreComponents from './pages/core_components';
 
 const App = () => {
   return (
@@ -16,9 +15,7 @@ const App = () => {
       <StatusBar
         barStyle={useColorScheme() === 'dark' ? Colors.dark : Colors.white}
       />
-      <View>
-        <Text style={styles.highlight}>Hi</Text>
-      </View>
+      <CoreComponents />
     </SafeAreaView>
   );
 };
@@ -26,6 +23,7 @@ const App = () => {
 // StyleSheet.create
 // options => auto complete, oranize Components style
 // 안쓰고 inline 해도됨 not required
+// https://reactnative.dev/ 참고하자
 const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
