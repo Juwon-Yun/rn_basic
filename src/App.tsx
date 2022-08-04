@@ -7,7 +7,8 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import CoreComponents from './pages/core_components';
+// import CoreComponents from './pages/core_components';
+import Translator from './pages/trans_conponents';
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
       <StatusBar
         barStyle={useColorScheme() === 'dark' ? Colors.dark : Colors.white}
       />
-      <CoreComponents />
+      {/* <CoreComponents /> */}
+      <Translator />
     </SafeAreaView>
   );
 };
