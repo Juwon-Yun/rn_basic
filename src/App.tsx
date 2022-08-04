@@ -7,8 +7,9 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import ScrollViewComponent from './pages/scrpllview';
 // import CoreComponents from './pages/core_components';
-import Translator from './pages/trans_conponents';
+// import Translator from './pages/trans';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         barStyle={useColorScheme() === 'dark' ? Colors.dark : Colors.white}
       />
       {/* <CoreComponents /> */}
-      <Translator />
+      {/* <Translator /> */}
+      <ScrollViewComponent />
     </SafeAreaView>
   );
 };
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
   darkStyle: {
     backgroundColor: Colors.darker,
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
 });
