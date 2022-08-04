@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -7,19 +7,23 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import ScrollViewComponent from './pages/scrpllview';
+// import ScrollViewComponent from './components/scrollview';
 // import CoreComponents from './pages/core_components';
 // import Translator from './pages/trans';
+import ListViewComponent from './components/listview';
 
 const App = () => {
+  const themeData = useColorScheme() === 'dark';
+
+  useEffect(() => {}, []);
+
   return (
     <SafeAreaView style={styles.darkStyle}>
-      <StatusBar
-        barStyle={useColorScheme() === 'dark' ? Colors.dark : Colors.white}
-      />
+      <StatusBar barStyle={themeData ? Colors.dark : Colors.white} />
       {/* <CoreComponents /> */}
       {/* <Translator /> */}
-      <ScrollViewComponent />
+      {/* <ScrollViewComponent /> */}
+      <ListViewComponent />
     </SafeAreaView>
   );
 };
