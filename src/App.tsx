@@ -11,14 +11,15 @@ import {
   (AsyncStorage, Navigation Bar, APIs, other Components)
 
   RN을 성공시키기 위해서 전부다 지원할 필요가 없었기 때문에 이제 지원하지 않는 패키지는 커뮤니티 패키지를 사용한다.
-
+  패키지 커뮤니티 -> https://reactnative.directory/
 */
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 // import ScrollViewComponent from './components/scrollview';
 // import CoreComponents from './pages/core_components';
 // import Translator from './pages/trans';
-import ListViewComponent from './components/listview';
+// import ListViewComponent from './components/listview';
+import LayoutScreen from './screen/layout_screen';
 
 const App = () => {
   const themeData = useColorScheme() === 'light';
@@ -31,7 +32,8 @@ const App = () => {
       {/* <CoreComponents /> */}
       {/* <Translator /> */}
       {/* <ScrollViewComponent /> */}
-      <ListViewComponent />
+      {/* <ListViewComponent /> */}
+      <LayoutScreen />
     </SafeAreaView>
   );
 };
